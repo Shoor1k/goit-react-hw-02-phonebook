@@ -1,4 +1,5 @@
 import s from "./Filter.module.css";
+import PropTypes from 'prop-types';
 
 
 const Filter = ({ filter, onFilterInput }) => {
@@ -16,5 +17,8 @@ const Filter = ({ filter, onFilterInput }) => {
         </>
     )
 }
-
+Filter.propTypes = {
+    filter: PropTypes.string.isRequired,
+    onFilterInput: PropTypes.func.isRequired,
+};
 export default Filter
